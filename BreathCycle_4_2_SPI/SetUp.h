@@ -120,9 +120,9 @@ void homingKalibration(){
   while(1){
     stepper.runSpeed();
     Serial.println(driver.sg_result());
-    if(driver.sg_result() < 355)beq=true; else beq = false;
+    if(driver.sg_result() < 200)beq=true; else beq = false;
     Serial.println(beq);
-    if(beq == true && i>150) break;
+    if(beq == true && i>300) break;
     i++;
     Serial.println(i);
   }
